@@ -15,6 +15,6 @@ tp_test_admin = AdminSite(name='tp_test_admin')
 
 tp_test_admin.register(SubjectScreening)
 tp_test_admin.register(SubjectConsent)
-#tp_test_admin.register(SubjectLocator)
+tp_test_admin.register(SubjectLocator)
 #tp_test_admin.register(SubjectVisit)
 #tp_test_admin.register(SubjectRequisition)

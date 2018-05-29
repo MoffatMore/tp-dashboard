@@ -5,7 +5,7 @@ from edc_model_wrapper.tests import ModelWrapperTestHelper
 
 from ..model_wrappers import AppointmentModelWrapper
 from ..model_wrappers import SubjectConsentModelWrapper
-#from ..model_wrappers import SubjectLocatorModelWrapper
+from ..model_wrappers import SubjectLocatorModelWrapper
 from ..model_wrappers import SubjectVisitModelWrapper
 from ..model_wrappers import SubjectScreeningModelWrapper
 from .models import SubjectScreening, Appointment, SubjectVisit
@@ -41,13 +41,13 @@ class TestModelWrappers(TestCase):
             subject_identifier='092-12345')
         helper.test(self)
 
-#     @tag('1')
-#     def test_subject_locator(self):
-#         helper = self.model_wrapper_helper_cls(
-#             model_wrapper=SubjectLocatorModelWrapper,
-#             app_label='tp_dashboard',
-#             subject_identifier='092-12345')
-#         helper.test(self)
+    @tag('1')
+    def test_subject_locator(self):
+        helper = self.model_wrapper_helper_cls(
+            model_wrapper=SubjectLocatorModelWrapper,
+            app_label='tp_dashboard',
+            subject_identifier='092-12345')
+        helper.test(self)
 
 #     def test_appointment(self):
 # 

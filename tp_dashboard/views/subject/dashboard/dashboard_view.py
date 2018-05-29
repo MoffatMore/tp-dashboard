@@ -10,7 +10,7 @@ from edc_subject_dashboard.view_mixins import SubjectDashboardViewMixin
 
 from ....model_wrappers import SubjectVisitModelWrapper
 from ....model_wrappers import SubjectConsentModelWrapper
-# from ....model_wrappers import SubjectLocatorModelWrapper
+from ....model_wrappers import SubjectLocatorModelWrapper
 
 
 class ActionItemModelWrapper(ModelWrapper):
@@ -61,6 +61,6 @@ class DashboardView(
     consent_model_wrapper_cls = SubjectConsentModelWrapper
     navbar_name = 'tp_dashboard'
     navbar_selected_item = 'consented_subject'
-#     subject_locator_model = 'edc_locator.subjectlocator'
-#     subject_locator_model_wrapper_cls = SubjectLocatorModelWrapper
+    subject_locator_model = 'edc_locator.subjectlocator'
+    subject_locator_model_wrapper_cls = SubjectLocatorModelWrapper
     visit_model_wrapper_cls = SubjectVisitModelWrapper

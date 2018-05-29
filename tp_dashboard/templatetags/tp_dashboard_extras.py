@@ -5,7 +5,7 @@ from edc_constants.constants import ABNORMAL
 register = template.Library()
 
 
-@register.inclusion_tag('ambition_dashboard/buttons/screening_button.html')
+@register.inclusion_tag('tp_dashboard/buttons/screening_button.html')
 def screening_button(model_wrapper):
     title = ['Edit subject\' screening form.']
 #     if model_wrapper.object.mental_status == ABNORMAL:
