@@ -36,9 +36,8 @@ class ListBoardView(NavbarViewMixin, EdcBaseViewMixin,
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-#         context.update(
-#             subject_screening_add_url=self.model_cls().get_absolute_url(),
-#             ABNORMAL=ABNORMAL)
+        context.update(
+            subject_screening_add_url=self.model_cls().get_absolute_url())
         return context
 
     def get_queryset_filter_options(self, request, *args, **kwargs):
