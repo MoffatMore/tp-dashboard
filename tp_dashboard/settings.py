@@ -17,7 +17,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP_NAME = 'tp_dashboard'
 ETC_DIR = os.path.join(BASE_DIR, 'etc')
-SITE_ID = 69
+SITE_ID = 10
 REVIEWER_SITE_ID = 0
 
 
