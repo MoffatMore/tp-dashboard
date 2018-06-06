@@ -1,6 +1,5 @@
 from django import template
 from django.conf import settings
-from edc_constants.constants import ABNORMAL
 
 register = template.Library()
 
