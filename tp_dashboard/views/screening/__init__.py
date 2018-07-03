@@ -1,1 +1,2 @@
 from .listboard_view import ListBoardView
+from .enrollment import ListBoardView as EnrollmentLossListBoardView

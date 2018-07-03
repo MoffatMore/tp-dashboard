@@ -1,0 +1,38 @@
+{% extends "edc_dashboard/listboard.html" %}
+{% load admin_urls %}
+{% load edc_base_extras %}
+
+{% block listboard_panel %}
+    <a id="return_to_home" title="go back" class="btn btn-sm btn-default" role="button" 
+        href="/">
+            <i class="fa fa-arrow-left fa-sm"></i> Go Back
+    </a>
+{% endblock listboard_panel %}
+
+
+{% block listboard_table_header %}
+    <!-- begin results header -->
+    <th>#</th>
+    <th></th>
+    <th>Screening Identifier</th>
+    <th>Enrollment Loss Date</th>
+    <th>Reasons Ineligible</th>
+    <!-- end results header -->
+{% endblock listboard_table_header %}
+
+
+{% block listboard_table_button_column %}
+	<td style="white-space: nowrap">
+	    <div class="btn-group">
+	    </div>
+	</td>
+{% endblock listboard_table_button_column %}
+
+
+{% block listboard_table_columns %}
+
+    <td>{{ result.screening_identifier }} </td>
+    <td nowrap>{{ result.report_datetime }}</td>
+    <td nowrap>{{ result.reasons_ineligible }}</td>
+
+{% endblock listboard_table_columns %}

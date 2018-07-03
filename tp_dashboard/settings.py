@@ -147,6 +147,7 @@ GIT_DIR = BASE_DIR
 DASHBOARD_URL_NAMES = {
     'subject_listboard_url': 'tp_dashboard:subject_listboard_url',
     'screening_listboard_url': 'tp_dashboard:screening_listboard_url',
+    'enrollment_listboard_url': 'tp_dashboard:enrollment_listboard_url',
     'subject_dashboard_url': 'tp_dashboard:subject_dashboard_url',
 }
 
@@ -154,6 +155,7 @@ DASHBOARD_BASE_TEMPLATES = {
     'listboard_base_template': 'trainee-project/base.html',
     'dashboard_base_template': 'trainee-project/base.html',
     'screening_listboard_template': 'tp_dashboard/screening/listboard.html',
+    'enrollment_listboard_template': 'tp_dashboard/screening/listboard_enrollment.html',
     'subject_listboard_template': 'tp_dashboard/subject/listboard.html',
     'subject_dashboard_template': 'tp_dashboard/subject/dashboard.html',
 }

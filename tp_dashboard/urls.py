@@ -4,7 +4,8 @@ from edc_appointment.admin_site import edc_appointment_admin
 from edc_dashboard import UrlConfig
 
 from .patterns import subject_identifier, screening_identifier
-from .views import SubjectListboardView, SubjectDashboardView, ScreeningListboardView
+from .views import SubjectListboardView, SubjectDashboardView
+from .views import ScreeningListboardView, EnrollmentLossListBoardView
 
 app_name = 'tp_dashboard'
 
@@ -20,6 +21,16 @@ screening_listboard_url_config = UrlConfig(
     label='screening_listboard',
     identifier_label='screening_identifier',
     identifier_pattern=screening_identifier)
+
+
+enrollment_loss_listboard_url_config = UrlConfig(
+    url_name='enrollment_listboard_url',
+    view_class=EnrollmentLossListBoardView,
+    label='enrollment_loss_listboard',
+    identifier_label='screening_identifier',
+    identifier_pattern=screening_identifier)
+
+
 subject_dashboard_url_config = UrlConfig(
     url_name='subject_dashboard_url',
     view_class=SubjectDashboardView,
@@ -31,6 +42,7 @@ subject_dashboard_url_config = UrlConfig(
 urlpatterns = []
 urlpatterns += subject_listboard_url_config.listboard_urls
 urlpatterns += screening_listboard_url_config.listboard_urls
+urlpatterns += enrollment_loss_listboard_url_config.listboard_urls
 urlpatterns += subject_dashboard_url_config.dashboard_urls
 
 if settings.APP_NAME == 'tp_dashboard':
@@ -40,6 +52,8 @@ if settings.APP_NAME == 'tp_dashboard':
     from .tests.admin import tp_test_admin
 
     urlpatterns += [
+#         path('enrollment_loss/', EnrollmentLossListBoardView().as_view(),
+#              name='enrollment_listboard_url'),
         path('edc_device/', include('edc_device.urls')),
         path('edc_protocol/', include('edc_protocol.urls')),
         path('admin/', edc_appointment_admin.urls),
