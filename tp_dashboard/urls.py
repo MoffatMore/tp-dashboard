@@ -15,6 +15,7 @@ subject_listboard_url_config = UrlConfig(
     label='subject_listboard',
     identifier_label='subject_identifier',
     identifier_pattern=subject_identifier)
+
 screening_listboard_url_config = UrlConfig(
     url_name='screening_listboard_url',
     view_class=ScreeningListboardView,
@@ -52,8 +53,6 @@ if settings.APP_NAME == 'tp_dashboard':
     from .tests.admin import tp_test_admin
 
     urlpatterns += [
-#         path('enrollment_loss/', EnrollmentLossListBoardView().as_view(),
-#              name='enrollment_listboard_url'),
         path('edc_device/', include('edc_device.urls')),
         path('edc_protocol/', include('edc_protocol.urls')),
         path('admin/', edc_appointment_admin.urls),
